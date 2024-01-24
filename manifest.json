@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Wiki Dark Mode",
+    "version": "0.1",
+    "description": "Enable dark mode on Wikipedia.",
+    "permissions": ["activeTab"],
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "48": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.wikipedia.org/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
